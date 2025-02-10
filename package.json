@@ -1,20 +1,54 @@
 {
-  "name": "license-plate-audit",
-  "version": "1.0.0",
-  "description": "Retrieve information about a license plate",
-  "main": "index.js",
+  "name": "@k3v-d3v/vehicle-auditor",
+  "version": "0.0.0",
+  "description": "Retrieve information about a license plate or VIN",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsc --project tsconfig.json --noEmit false && node dist/index.js",
+    "dev": "tsup --config tsup.config.ts --watch",
+    "lint": "tsc --project tsconfig.json",
+    "lint:emit": "tsc --project tsconfig.json --noEmit false",
+    "build": "tsup --config tsup.config.ts"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/k3v-d3v/license-plate-audit.git"
+    "url": "git+https://github.com/k3v-d3v/vehicle-auditor.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "cars",
+    "license plate",
+    "vin",
+    "audit"
+  ],
+  "author": "k3v-d3v",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/k3v-d3v/license-plate-audit/issues"
+    "url": "https://github.com/k3v-d3v/vehicle-auditor/issues"
   },
-  "homepage": "https://github.com/k3v-d3v/license-plate-audit#readme"
+  "homepage": "https://github.com/k3v-d3v/vehicle-auditor#readme",
+  "dependencies": {
+    "axios": "1.7.9"
+  },
+  "devDependencies": {
+    "@types/node": "22.13.1",
+    "tsup": "8.3.6",
+    "typescript": "5.7.3"
+  }
 }
