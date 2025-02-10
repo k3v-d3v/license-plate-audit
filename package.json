@@ -1,0 +1,20 @@
+{
+  "name": "license-plate-audit",
+  "version": "1.0.0",
+  "description": "Retrieve information about a license plate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k3v-d3v/license-plate-audit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k3v-d3v/license-plate-audit/issues"
+  },
+  "homepage": "https://github.com/k3v-d3v/license-plate-audit#readme"
+}
